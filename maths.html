@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Math: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let finalResult ;
+
+    let evenOddResult;
+
+    // Add your code here
+    let var1 = 4
+    let var2 = 2
+    let var3 = 14
+    let var4 = 6
+
+    let ft = var1 + var2 
+    let sb = var3 - var4 
+
+    finalResult = ft * sb
+
+    evenOddResult = finalResult % 2
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    const para1 = document.createElement('p');
+    const finalResultCheck = finalResult === 48 ? `Yes, well done!` : `No, it is ${ finalResult }`;
+    para1.textContent = `Is the finalResult 48? ${ finalResultCheck }`;
+    const para2 = document.createElement('p');
+    const evenOddResultCheck = evenOddResult === 0 ? 'The final result is even!' : 'The final result is odd. Hrm.';
+    para2.textContent = evenOddResultCheck;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+
+</html>

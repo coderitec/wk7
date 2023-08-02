@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array method</title>
+</head>
+<body>
+    <h1>les etudiants dans la classe</h1>
+    <h2>stephen eni chidinma</h2>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+<script>
+const grp = document.querySelectorAll('li')
+const hd = document.querySelector('h2')
+let students = hd.innerText
+
+let benchers = ['uche', 'shayo', 'success', 'tega']
+
+students = students.split(' ')
+
+grp[0].textContent = `Add 'princewill' to the end of the list: ${students.push('princewill')}`
+grp[1].textContent = `what is the length of the array: ${students.length}`
+grp[2].textContent = `Add 'abibat' at the start of the array: ${students.unshift('abibat')}`
+grp[3].innerText = `Add 'helen and bobby' at the end of the array: ${students.push('helen', 'bobby')}`
+grp[4].innerHTML = `remove 'bobby'(the end) from the list: ${students.pop()}`
+grp[5].innerHTML = `remove 'abibat'(the start) from the list: ${students.shift()}`
+grp[6].textContent = `add all the back benchers at the start: ${students.unshift(...benchers)}`
+grp[7].textContent = `Add 'abibat and paul' after 'stephen': ${students.splice(5,0,'abibat','paul')}` 
+grp[8].textContent = `Remove Paul: ${students.splice(students.indexOf('paul'), 1)}`
+grp[9].innerText = `The position of 'tega' on the list: ${students.indexOf('tega')}`
+grp[10].innerText = `The position of 'Tega' on the list: ${students.indexOf('Tega')}`
+grp[11].innerText = `The name on position 6: ${students[6]}`
+grp[12].innerText = `Cut out the first five names: ${students.slice(0, 5)}`
+grp[13].innerText = `Join the list with a '*': ${students.join('*')}`
+grp[14].innerHTML = `does list include 'joseph': ${students.includes('joseph')}`
+grp[15].innerHTML = `Sort the names in alphabetical order: ${students.sort()}`
+grp[16].innerText = `Sort these number from smallest to biggest [1,4,3,8,18,33,11,7,6,17,22]: ${[1,4,3,8,18,33,11,7,6,17,22].sort((a,b)=>a-b)}`
+grp[17].textContent = `Reverse the names on the list: ${students.reverse()}`
+grp[18].textContent = `Find all the names that starts with 's': ${students.filter(x => x.startsWith('s'))}`
+grp[19].textContent = `Find all the names that starts with 't': ${students.filter(x => x[0] === 't')}`
+grp[20].textContent = `Find all the includes 'c': ${students.filter(x => x.includes('c'))}`
+grp[21].innerText = `Change all names to start with uppercase: ${students.map(y => y.replace(y[0], y[0].toUpperCase()))}`
+grp[22].innerText = `Multiply every member by 5 [1,3,4,5,6]: ${[1,3,4,5,6].map(a => a * 5)}`
+grp[23].innerText = `Add up all the numbers within this array [1,3,4,5,6]: ${[1,3,4,5,6].reduce((a,f)=>a+f)}` 
+grp[24].innerText = `Multiply up all the numbers within this array [1,3,4,5,6]: ${[1,3,4,5,6].reduce((a,f)=>a*f)}`
+grp[25].innerHTML = `Find a name that starts with s: ${students.find(x => x.startsWith('s'))}`
+
+console.log(students)
+
+hd.innerText = students.join('-')
+</script>
+</html>
